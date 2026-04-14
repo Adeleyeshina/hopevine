@@ -1,0 +1,24 @@
+@import "tailwindcss";
+/* @import "tw-animate-css"; */
+
+html,
+body {
+    font-optical-sizing: auto;
+}
+
+@theme {
+    --color-deep-brown: #2E1B0E;
+    --color-primary: #5C3A1E;
+    --color-accent: #B07A4A;
+    --color-soft-cream: #EDD5B3;
+    --color-warm-white: #FDF7F0;
+    --color-vine-green: #5C7A3A;
+    --font-prata: "Prata", serif;
+    --font-lato: "Lato", sans-serif;
+}
+
+@layer base {
+    body {
+        @apply font-lato
+    }
+}
