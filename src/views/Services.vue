@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <section>
+    <section class="mb-50">
         Services
     </section>
 </template>

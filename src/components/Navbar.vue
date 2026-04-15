@@ -68,7 +68,7 @@ const item = {
                 </div>
             </div>
             <!-- mobile menu -->
-            <motion.div :variants="container" initial="hidden" :animate="isMenuOpen ? 'show' : 'hidden'" :class="['md:hidden border-t absolute left-0 w-full z-50 bg-warm-white border-soft-cream shadow mt-0 pt-3 pb-3.5 animate-in fade-in duration-700 transition-all',
+            <motion.div :variants="container" initial="hidden" :animate="isMenuOpen ? 'show' : 'hidden'" :class="['md:hidden border-t absolute left-0 w-full z-500 bg-warm-white border-soft-cream shadow mt-0 pt-3 pb-3.5 animate-in fade-in duration-700 transition-all',
                 isMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'
             ]">
                 <ul class="grid place-items-center gap-3">

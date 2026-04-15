@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <section>
+    <section class="mb-50">
         About
     </section>
 </template>
