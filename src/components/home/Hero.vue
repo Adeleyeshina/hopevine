@@ -13,7 +13,7 @@ import { easeInOut, motion } from 'motion-v';
             <!-- left -->
             <motion.div :initial="{ opacity: 0, x: -500 }" :animate="{ opacity: 1, x: 0 }"
                 :transition="{ ease: easeInOut, duration: 1 }" class="space-y-3 md:space-y-7">
-                <div class="flex item-center justify-center md:justify-start flex-wrap gap-x-10 lg:gap-x-15 text-accent">
+                <div class="flex item-center justify-center md:justify-start gap-x-10 lg:gap-x-15 text-accent">
                     <p>DECORATION</p>
                     <p>CATERING</p>
                     <p>EVENTS</p>
