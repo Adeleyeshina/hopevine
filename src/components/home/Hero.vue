@@ -28,7 +28,7 @@ import { easeInOut, motion } from 'motion-v';
                     enjoy the moment
                 </p>
 
-                <div class="flex flex-wrap gap-x-5 gap-y-7 justify-center md:justify-start mt-7">
+                <div class="flex  gap-x-4 gap-y-7 justify-center md:justify-start mt-7">
                     <Button to="/services" class="bg-accent text-white border-accent">
                         See our services
                     </Button>
