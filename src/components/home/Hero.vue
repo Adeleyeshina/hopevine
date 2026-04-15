@@ -12,23 +12,23 @@ import { easeInOut, motion } from 'motion-v';
         <main class="container mx-auto px-5 md:px-7 grid md:grid-cols-2 gap-x-15 gap-y-7 items-center">
             <!-- left -->
             <motion.div :initial="{ opacity: 0, x: -500 }" :animate="{ opacity: 1, x: 0 }"
-                :transition="{ ease: easeInOut, duration: 1 }" class="space-y-5 md:space-y-7">
-                <div class="flex item-center gap-10 lg:gap-x-15 text-accent">
+                :transition="{ ease: easeInOut, duration: 1 }" class="space-y-3 md:space-y-7">
+                <div class="flex item-center justify-center md:justify-start flex-wrap gap-x-10 lg:gap-x-15 text-accent">
                     <p>DECORATION</p>
                     <p>CATERING</p>
                     <p>EVENTS</p>
                 </div>
 
-                <h1 class="text-primary leading-10 text-[2rem] xl:text-5xl font-extrabold text-left xl:leading-14">
+                <h1 class="text-primary text-center leading-10 text-[2rem] xl:text-5xl font-extrabold md:text-left xl:leading-14">
                     Making every moment <span class="text-accent italic">unforgettable</span>
                 </h1>
 
-                <p class="text-primary text-xl leading-8 xl:text-[1.7rem] font-medium">
+                <p class="text-primary text-lg leading-7 xl:text-[1.7rem] font-medium text-center md:text-left md:leading-9">
                     From intimate dinners to grand celebrations, we handle every details so you can simply
                     enjoy the moment
                 </p>
 
-                <div class="space-x-5 mt-5">
+                <div class="flex flex-wrap gap-x-5 gap-y-7 justify-center md:justify-start mt-7">
                     <Button to="/services" class="bg-accent text-white border-accent">
                         See our services
                     </Button>

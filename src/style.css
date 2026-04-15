@@ -4,6 +4,7 @@
 html,
 body {
     font-optical-sizing: auto;
+    overflow-x : hidden;
 }
 
 @theme {
