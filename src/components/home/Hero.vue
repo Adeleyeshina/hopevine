@@ -42,7 +42,7 @@ import { easeInOut, motion } from 'motion-v';
             <!-- right -->
             <motion.div :initial="{ opacity: 0, x: 500 }" :animate="{ opacity: 1, x: 0 }"
                 :transition="{ ease: easeInOut, duration: 1, delay: .4 }"
-                class="relative h-90 lg:h-130 rounded-lg overflow-hidden">
+                class="relative h-90 xl:h-120 2xl:h-130 rounded-lg overflow-hidden">
                 <img loading="eager" :src="Hero" alt="hero" class=" w-full h-full object-cover object-top">
                 <div class="absolute inset-0 bg-black/40 mix-bend-overlay "></div>
 

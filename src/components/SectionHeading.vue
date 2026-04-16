@@ -1,0 +1,31 @@
+<script setup lang="ts">
+import { easeInOut, motion } from 'motion-v';
+
+defineProps<{
+    subtitle?: string,
+    title?: string,
+    description?: string,
+}>()
+const container = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { staggerChildren: .2, ease: easeInOut, delayChildren: .5, } }
+}
+const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, }
+}
+
+</script>
+
+
+<template>
+    <motion.main :variants="container" initial="hidden" whileInView="show" :viewport="{ once: true, amount: 0.8, }"
+        class="text-center md:text-left">
+        <motion.p :variants="item" class="text-gray-700 font-medium uppercase text-lg "
+            :class="subtitle && 'mb-2 md:mb-5'">
+            {{ subtitle }}
+        </motion.p>
+        <motion.h2 :variants="item" class="text-3xl text-deep-brown font-bold">{{ title }}</motion.h2>
+        <motion.p :variants="item" class="text-black  mt-1 text-lg">{{ description }}</motion.p>
+    </motion.main>
+</template>
