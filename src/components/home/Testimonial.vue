@@ -5,7 +5,7 @@ import SectionHeading from '../SectionHeading.vue';
 
 <template>
     <section class="bg-white py-7 md:py-10">
-        <div class="px-5 md:px-7 container mx-auto">
+        <div class="px-5 lg:px-7 container mx-auto">
             <SectionHeading subtitle="Kind Words" title="What our clients say"/>
         </div>
     </section>
