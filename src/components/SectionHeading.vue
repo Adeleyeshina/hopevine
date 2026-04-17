@@ -21,11 +21,11 @@ const item = {
 <template>
     <motion.main :variants="container" initial="hidden" whileInView="show" :viewport="{ once: true, amount: 0.5, }"
         class="text-center md:text-left">
-        <motion.p :variants="item" class="text-gray-700 font-semibold uppercase text-base "
+        <motion.p :variants="item" class="text-gray-700 font-semibold uppercase text-sm md:text-base "
             :class="subtitle && 'mb-2 md:mb-5'">
             {{ subtitle }}
         </motion.p>
-        <motion.h2 :variants="item" class="text-3xl text-deep-brown font-bold">{{ title }}</motion.h2>
-        <motion.p :variants="item" class="text-black  mt-1 text-lg">{{ description }}</motion.p>
+        <motion.h2 :variants="item" class="text-2xl md:text-3xl text-deep-brown font-bold">{{ title }}</motion.h2>
+        <motion.p :variants="item" class="text-black  mt-1 text-base md:text-lg ">{{ description }}</motion.p>
     </motion.main>
 </template>
