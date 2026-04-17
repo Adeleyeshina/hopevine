@@ -12,18 +12,21 @@ export const navLinks = [
 
 export const homeServiceContent: HomeService[] = [
     {
+        id: 1,
         icon: Sparkles,
         title: 'Decoration',
         desc: 'Floaral arrangements, table settings, ballon art, backdrops, and themed decor for any occasion.',
-        color:  '#B07A4A'
+        color: '#B07A4A'
     },
     {
+        id: 2,
         icon: ChefHat,
         title: 'Catering',
         desc: 'Delicious Nigerian and continental cuisine for weddings, birthdays, corporate events, and more.',
         color: '#5C7A3A'
     },
     {
+        id: 3,
         icon: CalendarDays,
         title: 'Event Plaining',
         desc: 'End-to-end coordination from concept to execution so your event runs smoothly and beautifully.',
