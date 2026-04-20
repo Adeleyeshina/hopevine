@@ -40,7 +40,7 @@ const item = {
                     <!-- Logo -->
                     <RouterLink to="/"
                         class="w-18 md:w-24">
-                        <img :src="Logo" alt="Hopvine event logo" class="object-cover w-full h-full ">
+                        <img :src="Logo" loading="eager" alt="Hopvine event logo" class="object-cover w-full h-full ">
                     </RouterLink>
 
                     <div class="flex items-center space-x-5">

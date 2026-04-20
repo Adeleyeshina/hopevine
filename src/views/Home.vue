@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Hero from '../components/home/Hero.vue';
+import HomeCta from '../components/home/HomeCta.vue';
 import HowItWorksSection from '../components/home/HowItWorksSection.vue';
 import ServiceSection from '../components/home/ServiceSection.vue';
 import Testimonial from '../components/home/Testimonial.vue';
@@ -11,4 +12,5 @@ import Testimonial from '../components/home/Testimonial.vue';
     <ServiceSection />
     <HowItWorksSection />
     <Testimonial />
+    <HomeCta />
 </template>

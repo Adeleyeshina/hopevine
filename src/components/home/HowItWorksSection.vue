@@ -25,7 +25,7 @@ const item = {
                 class="grid md:grid-cols-4 gap-3 mt-4">
                 <motion.div :variants="item" v-for="(img, i) in images"
                     :class="['rounded-lg overflow-hidden  h-50 md:h-100 2xl:h-120', i === 0 && 'col-span-2']">
-                    <img :key="i" :src="img" :alt="`work-${i + 1}`" class="h-full w-full object-cover object-center">
+                    <img :key="i" loading="lazy" :src="img" :alt="`work-${i + 1}`" class="h-full w-full object-cover object-center">
                 </motion.div>
             </motion.div>
         </div>

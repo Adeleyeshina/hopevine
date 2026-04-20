@@ -37,12 +37,12 @@ export const homeServiceContent: HomeService[] = [
 export const testimonials : Testimonial[] = [
     {
         rating: 5,
-        message: "Hopevine handled everything from catering to decor flawlessly. The setup was elegant, the food was delicious, and we didn’t have to worry about a thing all day.",
+        message: "Hopevine handled everything from catering to decor flawlessly. The setup was elegant, and the food was delicious.",
         name: 'Chinedu & Amaka',
         event: 'Traditional wedding, Abuja'
     },
     {
-        rating: 4.5,
+        rating: 5,
         message: "Hopevine turned our reception hall into something straight out of a dream. Every guest kept asking who did the decor!",
         name: 'Adaeze & Femi',
         event : 'Wedding receptiong, Lagos'       
@@ -51,8 +51,8 @@ export const testimonials : Testimonial[] = [
     {
         rating: 5,
         message: 'The food was absolutely amazing everyone kept going back for seconds. Professional, punctual and stress-free',
-        name: 'Adaeze & Femi',
-        event : 'Wedding receptiong, Lagos'       
+        name: 'Tunde Kehinde',
+        event : 'Birthday, Ibadan'       
         
     },
 ]
