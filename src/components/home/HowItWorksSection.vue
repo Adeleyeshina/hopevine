@@ -17,12 +17,12 @@ const item = {
 </script>
 
 <template>
-    <section class="bg-warm-white py-7 md:py-10">
+    <section class="bg-primary py-7 md:py-10">
         <div class="container mx-auto px-5 md:px-7">
-            <SectionHeading subtitle="our work" />
+            <SectionHeading subtitle="our work" mode="dark"/>
 
             <motion.div :variants="container" initial="hidden" whileInView="show" :viewport="{ once: true, amount: .9 }"
-                class="grid md:grid-cols-4 mt-2 gap-3 mt-3">
+                class="grid md:grid-cols-4 gap-3 mt-4">
                 <motion.div :variants="item" v-for="(img, i) in images"
                     :class="['rounded-lg overflow-hidden  h-50 md:h-100 2xl:h-120', i === 0 && 'col-span-2']">
                     <img :key="i" :src="img" :alt="`work-${i + 1}`" class="h-full w-full object-cover object-center">

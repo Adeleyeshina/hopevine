@@ -5,6 +5,7 @@ import Button from './Button.vue';
 import { Menu, X } from '@lucide/vue';
 import { ref, watch } from 'vue';
 import { easeInOut, motion } from 'motion-v';
+import Logo from '../../src/assets/images/logo.png'
 
 const isMenuOpen = ref(false)
 
@@ -31,21 +32,21 @@ const item = {
 
 <template>
     <motion.nav :initial="{ opacity: 0, y: -50 }" :animate="{ opacity: 1, y: 0 }" :transition="{ duration: 0.7 }">
-        <nav class="bg-warm-white/20 shadow relative">
+        <nav class="bg-white shadow relative">
             <div class="container mx-auto px-5 py-3 relative">
 
                 <!-- Nav view -->
                 <div class="display flex justify-between items-center">
                     <!-- Logo -->
                     <RouterLink to="/"
-                        class="font-black font-prata text-lg lg:text-[1.8rem] text-nowrap text-primary-color">
-                        Hopevine <span class="text-accent italic font-prat ">& Co.</span>
+                        class="w-18 md:w-24">
+                        <img :src="Logo" alt="Hopvine event logo" class="object-cover w-full h-full ">
                     </RouterLink>
 
                     <div class="flex items-center space-x-5">
-                        <ul class="md:flex gap-5 items-center hidden">
+                        <ul class="md:flex gap-5 items-center hidden mr-5">
                             <li v-for="({ path, name }) in navLinks" :key="name">
-                                <RouterLink :to="path" class="text-primary font-medium text-lg hover:text-deep-brown"
+                                <RouterLink :to="path" class="text-dark font-medium text-lg hover:text-primary"
                                     v-slot="{ isActive }">
                                     <span :class="isActive && 'text-accent'">
                                         {{ name }}
@@ -59,7 +60,7 @@ const item = {
                         </Button>
 
                         <!-- toggle menu -->
-                        <button class="bg-soft-cream p-2 rounded cursor-pointer md:hidden"
+                        <button class="bg-primary text-white p-2 rounded cursor-pointer md:hidden"
                             @click="isMenuOpen = !isMenuOpen">
                             <X v-if="isMenuOpen" :size="20" class="text-deep-brown" />
                             <Menu v-else :size="20" class="text-deep-brown" />
@@ -68,7 +69,7 @@ const item = {
                 </div>
             </div>
             <!-- mobile menu -->
-            <motion.div :variants="container" initial="hidden" :animate="isMenuOpen ? 'show' : 'hidden'" :class="['md:hidden border-t absolute left-0 w-full z-500 bg-warm-white border-soft-cream shadow mt-0 pt-3 pb-3.5 animate-in fade-in duration-700 transition-all',
+            <motion.div :variants="container" initial="hidden" :animate="isMenuOpen ? 'show' : 'hidden'" :class="['md:hidden border-t absolute left-0 w-full z-500 bg-white shadow mt-0 pt-3 pb-3.5 animate-in fade-in duration-700 transition-all',
                 isMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'
             ]">
                 <ul class="grid place-items-center gap-3">

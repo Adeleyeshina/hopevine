@@ -12,7 +12,7 @@ defineProps<{
 
 const mergedClass = computed(() => {
   return cn(
-    'text-nowrap border font-medium border-soft-cream shadow-soft-cream rounded-lg py-2 pb-2.5 px-5 hover:bg-primary hover:text-warm-white hover:border-primary transition-colors duration-300',
+    'text-nowrap border font-medium text-primary border-primary shadow-soft-cream rounded-lg py-2 pb-2.5 px-5 hover:bg-primary hover:text-white hover:border-primary transition-colors duration-300',
     attrs.class as string
   );
 });
