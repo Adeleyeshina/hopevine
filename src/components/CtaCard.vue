@@ -43,22 +43,22 @@ const item = {
         </div>
 
         <!-- buttons -->
-        <motion.div :variants="item" class="space-x-2.5 sm:space-x-5">
+        <motion.div :variants="item" class="flex flex-col items-center justify-center gap-y-3 md:flex-row space-x-5">
             <a :href="`tel:${number}`"
-                class=" py-2 pb-2.5 px-5 transition-colors duration-300 bg-primary rounded-full text-white hover:bg-accent"
+                class=" py-2 pb-2.5 px-5 transition-colors w-fit duration-300 bg-primary rounded-full text-white hover:bg-accent"
                 :class="callButton ? 'inline-block' : 'hidden'">
                 <Phone :size="20" class="inline-block mr-1 " />
                 Call Us
             </a>
             <a :href="`https://wa.me/${number}?text=${encodeURIComponent(message)}`" rel="nofollow noreferrer noopener"
                 target="_blank"
-                class="py-2 pb-2.5 px-5 transition-colors duration-300 text-white rounded-full bg-primary border-primary hover:bg-accent hover:border-accent"
+                class="py-2 pb-2.5 px-5 w-fit transition-colors duration-300 text-white rounded-full bg-primary border-primary hover:bg-accent hover:border-accent"
                 :class="whatsappButton ? 'inline-block' : 'hidden'">
 
                 Chat on WhatsApp
             </a>
             <Button :to="buttonUrl"
-                class="text-white rounded-full bg-accent border-accent hover:bg-primary hover:border-primary">
+                class="text-white rounded-full w-fit bg-accent border-accent hover:bg-primary hover:border-primary">
                 {{ buttonText }}
             </Button>
         </motion.div>
