@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { motion } from 'motion-v';
+import { easeInOut, motion } from 'motion-v';
 import Button from './Button.vue';
 import { Phone } from '@lucide/vue';
+
 
 
 withDefaults(defineProps<{
@@ -14,24 +15,35 @@ withDefaults(defineProps<{
 }>(), {
     buttonText: "Contact Us",
     buttonUrl: "/contact",
-    whatsappButton: true,
-    callButton: true
+    whatsappButton: false,
+    callButton: false
 }
 )
 
 const number = import.meta.env.VITE_PHONENUMBER;
 const message = "Hi Hopevine Events! I came across your website and I’d love to know more about your services."
+
+const container = {
+    hidden: { opacity: 0 },
+    show : {opacity : 1, transition : {staggerChildren : .3, delayChildren : .5}}
+}
+
+const item = {
+    hidden: { opacity: 0, y : 20 },
+    show: { opacity: 1, y : 0,  transition: { ease : easeInOut } }
+}
 </script>
 
 <template>
-    <div class="bg-deep-blue text-white w-full p-7 rounded-xl flex items-center justify-between">
-        <div class="flex-1">
-            <h2>{{ title }}</h2>
-            <p>{{ desc }}</p>
+    <motion.div :variants="container" initial="hidden" whileInView="show"  :viewport="{once : true, amount : .5}"
+    class="bg-deep-blue text-white w-full p-4 py-7 md:p-8 rounded-xl flex flex-col lg:flex-row space-y-3 justify-center items-center lg:justify-between text-center lg:text-left">
+        <div class="lg:flex-1">
+            <motion.h2 :variants="item" class="text-2xl md:text-4xl font-bold">{{ title }}</motion.h2>
+            <motion.p :variants="item" class="mt-2 lg:mt-1 font-semibold text-base md:text-lg">{{ desc }}</motion.p>
         </div>
 
         <!-- buttons -->
-        <motion.div class="space-x-4">
+        <motion.div :variants="item" class="space-x-2.5 sm:space-x-5">
             <a :href="`tel:${number}`"
                 class=" py-2 pb-2.5 px-5 transition-colors duration-300 bg-primary rounded-full text-white hover:bg-accent"
                 :class="callButton ? 'inline-block' : 'hidden'">
@@ -50,5 +62,5 @@ const message = "Hi Hopevine Events! I came across your website and I’d love t
                 {{ buttonText }}
             </Button>
         </motion.div>
-    </div>
+    </motion.div>
 </template>
