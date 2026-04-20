@@ -9,11 +9,13 @@ withDefaults(defineProps<{
     desc: string,
     buttonText?: string,
     buttonUrl?: string,
-    whatsapp?: boolean,
+    whatsappButton?: boolean,
     callButton?: boolean,
 }>(), {
     buttonText: "Contact Us",
-    buttonUrl: "/contact"
+    buttonUrl: "/contact",
+    whatsappButton: true,
+    callButton: true
 }
 )
 
@@ -30,16 +32,19 @@ const message = "Hi Hopevine Events! I came across your website and I’d love t
 
         <!-- buttons -->
         <motion.div class="space-x-4">
-            <Button :to="`tel:${number}`" class="bg-primary rounded-full text-white hover:bg-accent">
+            <a :href="`tel:${number}`"
+                class=" py-2 pb-2.5 px-5 transition-colors duration-300 bg-primary rounded-full text-white hover:bg-accent"
+                :class="callButton ? 'inline-block' : 'hidden'">
                 <Phone :size="20" class="inline-block mr-1 " />
                 Call Us
-            </Button>
-            <Button :to="`https://wa.me/${number}?text=${encodeURIComponent(message)}`" rel="nofollow noreferrer noopener"
+            </a>
+            <a :href="`https://wa.me/${number}?text=${encodeURIComponent(message)}`" rel="nofollow noreferrer noopener"
                 target="_blank"
-                class="py-2 pb-2.5 px-5 text-white rounded-full bg-primary border-primary hover:bg-accent hover:border-accent">
+                class="py-2 pb-2.5 px-5 transition-colors duration-300 text-white rounded-full bg-primary border-primary hover:bg-accent hover:border-accent"
+                :class="whatsappButton ? 'inline-block' : 'hidden'">
 
                 Chat on WhatsApp
-            </Button>
+            </a>
             <Button :to="buttonUrl"
                 class="text-white rounded-full bg-accent border-accent hover:bg-primary hover:border-primary">
                 {{ buttonText }}
