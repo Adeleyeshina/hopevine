@@ -8,7 +8,7 @@ const date = new Date()
     <footer class="py-3 bg-primary text-white">
         <div class="container mx-auto px-5 md:px-7 ">
             <div class="flex flex-col text-center gap-y-2 items-center lg:flex-row justify-between">
-                <RouterLink to="/" class="text-nowrap text-2xl font-bold">
+                <RouterLink to="/" class="text-nowrap text-xl md:text-2xl font-bold">
                     Hopevine Event
                 </RouterLink>
 
