@@ -12,20 +12,21 @@ const container = {
 }
 const item = {
     hidden: { opacity: 0, scale: 0.4 },
-    show: { opacity: 1, scale: 1, transition: { ease: easeInOut, duration : .2 } }
+    show: { opacity: 1, scale: 1, transition: { ease: easeInOut, duration: .2 } }
 }
 </script>
 
 <template>
     <section class="bg-primary py-7 md:py-10">
         <div class="container mx-auto px-5 md:px-7">
-            <SectionHeading subtitle="our work" mode="dark"/>
+            <SectionHeading subtitle="our work" mode="dark" />
 
             <motion.div :variants="container" initial="hidden" whileInView="show" :viewport="{ once: true, amount: .9 }"
                 class="grid md:grid-cols-4 gap-3 mt-4">
                 <motion.div :variants="item" v-for="(img, i) in images"
                     :class="['rounded-lg overflow-hidden  h-50 md:h-100 2xl:h-120', i === 0 && 'col-span-2']">
-                    <img :key="i" loading="lazy" :src="img" :alt="`work-${i + 1}`" class="h-full w-full object-cover object-center">
+                    <img :key="i" loading="lazy" :src="img" :alt="`work-${i + 1}`"
+                        class="h-full w-full object-cover object-center">
                 </motion.div>
             </motion.div>
         </div>

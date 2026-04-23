@@ -29,10 +29,10 @@ import { easeInOut, motion } from 'motion-v';
                 </p>
 
                 <div class="flex  gap-x-4 gap-y-7 justify-center md:justify-start mt-7">
-                    <Button to="/services" class="bg-accent text-white border-accent hover:border-accent hover:bg-transparent">
+                    <Button to="/services" class="border-2 bg-accent text-white border-accent hover:border-accent hover:bg-transparent">
                         See our services
                     </Button>
-                    <Button to="/gallery" class="border-accent text-white hover:bg-accent">
+                    <Button to="/gallery" class="border-2 border-accent text-white hover:bg-accent">
                         View gallery
                         <ArrowRight :size="20" class="inline-block" />
                     </Button>
