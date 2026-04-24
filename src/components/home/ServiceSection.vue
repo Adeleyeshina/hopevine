@@ -13,7 +13,7 @@ const container = {
 
 <template>
     <motion.section class="bg-white py-7 md:py-10">
-        <div class="container mx-auto px-5 md:px-7">
+        <div class="container mx-auto px-5 md:px-7 2xl:px-18">
             <SectionHeading subtitle="what we offer" title="Our services" desc
                 description="Tailored to your vision, delivered with care" />
 

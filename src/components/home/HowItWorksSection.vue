@@ -17,8 +17,8 @@ const item = {
 </script>
 
 <template>
-    <section class="bg-primary py-7 md:py-10">
-        <div class="container mx-auto px-5 md:px-7">
+    <section class="bg-primary py-7 md:py-10 ">
+        <div class="container mx-auto px-5 md:px-7 2xl:px-18">
             <SectionHeading subtitle="our work" mode="dark" />
 
             <motion.div :variants="container" initial="hidden" whileInView="show" :viewport="{ once: true, amount: .9 }"

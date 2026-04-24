@@ -12,7 +12,7 @@ const container = {
 
 <template>
     <section class="bg-white py-7 md:py-10">
-        <div class="px-5 md:px-7 container mx-auto">
+        <div class="px-5 md:px-7 container mx-auto 2xl:px-18">
             <SectionHeading subtitle="Kind Words" title="What our clients say" />
 
             <motion.div :variants="container" initial="hidden" whileInView="show"

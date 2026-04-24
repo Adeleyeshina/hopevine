@@ -5,7 +5,7 @@ import CtaCard from '../CtaCard.vue';
 
 <template>
     <section class="bg-white py-7 md:py-10">
-        <div class="container mx-auto px-5 md:px-7">
+        <div class="container mx-auto px-5 md:px-7 2xl:px-18">
             <CtaCard title="Ready to plan your event?"
                 desc="Let's bring your vision to life, reach out for a free consultation." whatsapp-button />
         </div>

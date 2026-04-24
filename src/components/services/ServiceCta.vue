@@ -5,7 +5,7 @@ import CtaCard from '../CtaCard.vue';
 
 <template>
     <section class="bg-deep-blue">
-        <div class="container mx-auto px-5 md:px-7">
+        <div class="container mx-auto px-5 md:px-7 2xl:px-18">
             <CtaCard title="Ready to book?"
                 desc="Get in touch for free consultation" call-button />
         </div>
