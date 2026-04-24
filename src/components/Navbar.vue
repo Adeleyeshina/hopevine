@@ -33,7 +33,7 @@ const item = {
 <template>
     <motion.nav :initial="{ opacity: 0, y: -50 }" :animate="{ opacity: 1, y: 0 }" :transition="{ duration: 0.7 }">
         <nav class="bg-white shadow relative">
-            <div class="container mx-auto px-5 py-3 relative">
+            <div class="container mx-auto px-5 md:px-7 2xl:px-18 py-3 relative">
 
                 <!-- Nav view -->
                 <div class="display flex justify-between items-center">
