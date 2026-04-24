@@ -9,7 +9,7 @@ import { easeInOut, motion } from 'motion-v';
 
 <template>
     <header class="bg-primary py-7">
-        <main class="container mx-auto px-5 md:px-7 2xl:px-12 grid md:grid-cols-2 gap-x-15 gap-y-7 items-center">
+        <main class="container mx-auto px-5 md:px-7 2xl:px-16 grid md:grid-cols-2 gap-x-15 gap-y-7 items-center">
             <!-- left -->
             <motion.div :initial="{ opacity: 0, x: -500 }" :animate="{ opacity: 1, x: 0 }"
                 :transition="{ ease: easeInOut, duration: 1 }" class="space-y-3 md:space-y-7">
