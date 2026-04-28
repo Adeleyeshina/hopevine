@@ -54,7 +54,7 @@ const item = {
                 target="_blank"
                 class="py-2 pb-2.5 px-5 border w-fit transition-colors flex gap-3 items-center duration-300 text-white rounded-full bg-primary border-primary hover:bg-accent hover:border-accent"
                 :class="whatsappButton ? 'inline-block' : 'hidden'">
-                <WhatsappIcon class="w-6 md:w-7 inline-block mr-1.5"/>
+                <WhatsappIcon class="w-6  inline-block mr-1.5"/>
                 <span class="hidden md:inline-block">Chat on WhatsApp</span>
                 <span class="inline-block md:hidden">WhatsApp</span>
             </a>

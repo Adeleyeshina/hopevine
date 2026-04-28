@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import GalleryGrid from '../components/gallery/GalleryGrid.vue';
+import GalleryHero from '../components/gallery/GalleryHero.vue';
+
 </script>
 
 <template>
-    <section class="mb-50">
-        Galery
-    </section>
+    <GalleryHero />
+    <GalleryGrid />
 </template>

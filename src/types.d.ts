@@ -21,5 +21,12 @@ export type Service = {
     desc: string,
     attrs: string[],
     color: string,
-    img : string
+    img: string
+}
+
+export interface Value {
+    icon: Component,
+    title: string,
+    desc: string,
+    color : string
 }

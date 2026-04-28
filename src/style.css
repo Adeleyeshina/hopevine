@@ -4,14 +4,25 @@
 html,
 body {
     font-optical-sizing: auto;
-    overflow-x : hidden;
+    overflow-x: hidden;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE & Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 @theme {
     --color-primary: #0882B1;
     --color-accent: #F68831;
-    --color-dark : #252024;
-    --color-deep-blue : #0f6280;
+    --color-dark: #252024;
+    --color-deep-blue: #0f6280;
     --color-vine-green: #5C7A3A;
     --font-prata: "Prata", serif;
     --font-lato: "Lato", sans-serif;
@@ -21,7 +32,8 @@ body {
     body {
         @apply font-lato
     }
-    .page-header span{
-        @apply  text-accent italic md:block
+
+    .page-header span {
+        @apply text-accent italic
     }
 }

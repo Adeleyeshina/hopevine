@@ -1,6 +1,6 @@
 
-import { CalendarDays, ChefHat, Sparkles } from '@lucide/vue';
-import type { HomeService, Service, Testimonial } from './types';
+import { CalendarDays, ChefHat, Clock, MapPin, Sparkles, Star } from '@lucide/vue';
+import type { HomeService, Service, Testimonial, Value } from './types';
 import Img1 from '../src/assets/images/img-1.webp'
 
 export const navLinks = [
@@ -84,3 +84,24 @@ export const serviceData: Service[] = [
         img: Img1
     },
 ]
+
+export const values: Value[] = [
+    {
+        icon: Star,
+        title: "Excellence",
+        desc: "We don't cut corners. Every detail, big or small, gets our full attention.",
+        color: '#0882B1'
+    },
+    {
+        icon: Clock,
+        title: "Reliability",
+        desc: "We show up on time, every time. Your event runs smoothly because we plan it that way.",
+        color: '#5C7A3A'
+    },
+    {
+        icon: MapPin,
+        title: "Care",
+        desc: "We treat your event like it's our own family celebration. That's the Hopevine difference.",
+        color: '#5B7FA3'
+    }
+];
