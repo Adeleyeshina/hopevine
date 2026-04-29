@@ -16,7 +16,7 @@ const items = {
             <div class="inline-flex p-2 md:p-3 bg-(--card-color)/20 rounded-full">
                 <component :is="icon" :size="20" class="text-(--card-color)" />
             </div>
-            <h3 class="text-deep-blue text-lg md:text-xl font-semibold mt-2">{{ title }}</h3>
+            <h3 class="text-deep-blue text-xl md:text-xl font-semibold mt-2">{{ title }}</h3>
             <p class="text-base leading-5 md:text-lg font-medium md:leading-6 tracking-wide">{{ desc }}</p>
         </div>
     </motion.article>
