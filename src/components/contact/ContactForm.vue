@@ -66,7 +66,7 @@ const handleContactForm = () => {
             <div class="flex flex-col">
                 <label for="name" class="mb-1.5 ml-1  text-base">Event Date</label>
                 <input required @click="openDatePicker" :min="today" type="date" v-model="contactForm.date"
-                    class="border-0 outline-0 ring-2 ring-gray-200/80 py-2 px-5 focus:ring-primary rounded-md">
+                    class="border-0 outline-0 ring-2 w-full ring-gray-200/80 py-2 px-5 focus:ring-primary rounded-md">
             </div>
             <div class="flex flex-col">
                 <label for="name" class="mb-1.5 ml-1  text-base">Tell us about your event</label>
