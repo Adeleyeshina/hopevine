@@ -41,7 +41,24 @@ import { Mail, MapPin, Phone } from '@lucide/vue';
 
             <hr class="border-gray-300 mt-7 mb-5">
 
-            <div>hh</div>
+            <div>
+                <p class="text-lg ">Business hours</p>
+
+             <div class="mt-3 space-y-1.5">
+                   <div class="flex justify-between">
+                        <p>Monday - Friday</p>
+                        <p>8:00am - 6:00pm</p>
+                    </div>
+                   <div class="flex justify-between">
+                        <p>Saturday</p>
+                        <p>9:00am - 5:00pm</p>
+                    </div>
+                   <div class="flex justify-between">
+                        <p>Sunday</p>
+                        <p class="text-primary">By appointment</p>
+                    </div>
+             </div>
+            </div>
         </div>
     </aside>
 </template>
