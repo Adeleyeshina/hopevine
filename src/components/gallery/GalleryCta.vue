@@ -6,8 +6,7 @@ import CtaCard from '../CtaCard.vue';
 <template>
     <section class="py-7">
         <div class="container mx-auto px-5 md:px-7 2xl:px-18">
-            <CtaCard title="Ready to book?"
-                desc="Get in touch for free consultation" call-button button-text="Contact us today" />
+            <CtaCard title="Want us to create your moment?" button-text="Book a Consultation"/>
         </div>
     </section>
 </template>

@@ -2,12 +2,14 @@
 import { CalendarDays, ChefHat, Clock, MapPin, Sparkles, Star } from '@lucide/vue';
 import type { HomeService, Service, Testimonial, Value } from './types';
 import Img1 from '../src/assets/images/img-1.webp'
+import Img2 from '../src/assets/images/img-2.webp'
+import Img3 from '../src/assets/images/img-3.webp'
 
 export const navLinks = [
     { path: "/", name: "Home" },
+    { path: "/about", name: "About" },
     { path: "/services", name: "Services" },
     { path: "/gallery", name: "Gallery" },
-    { path: "/about", name: "About" },
     { path: "/contact", name: "Contact" },
 ]
 
@@ -105,3 +107,12 @@ export const values: Value[] = [
         color: '#5B7FA3'
     }
 ];
+
+export const galleryImage: Record<string, string[]> = {
+    allEvents: [Img1, Img2, Img3],
+    wedding: [Img2, Img3],
+    birthday: [Img3],
+    corporate: [Img3, Img2],
+    // naming: [Img2, Img1],
+    naming: []
+}

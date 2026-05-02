@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import GalleryCta from '../components/gallery/GalleryCta.vue';
 import GalleryGrid from '../components/gallery/GalleryGrid.vue';
 import GalleryHero from '../components/gallery/GalleryHero.vue';
 
@@ -7,4 +8,5 @@ import GalleryHero from '../components/gallery/GalleryHero.vue';
 <template>
     <GalleryHero />
     <GalleryGrid />
+    <GalleryCta />
 </template>
