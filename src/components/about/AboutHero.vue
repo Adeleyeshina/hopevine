@@ -40,7 +40,7 @@ import Hero from '../../assets/images/ceo.jpeg'
                 :transition="{ ease: easeInOut, duration: 1, delay: .4 }"
                 class="relative h-90 xl:h-120 2xl:h-130 rounded-lg overflow-hidden">
                 <img loading="eager" :src="Hero" alt="hero" class=" w-full h-full object-cover">
-                <div class="absolute inset-0 bg-black/40 mix-bend-overlay "></div>
+                <div class="absolute inset-0 bg-black/20 mix-bend-overlay "></div>
             </motion.div>
         </main>
     </header>

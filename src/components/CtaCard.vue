@@ -38,7 +38,7 @@ const item = {
     <motion.div :variants="container" initial="hidden" whileInView="show"  :viewport="{once : true, amount : .5}"
     class="bg-deep-blue text-white w-full p-4 py-7 md:p-8 rounded-xl flex flex-col lg:flex-row space-y-3 justify-center items-center lg:justify-between text-center lg:text-left">
         <div class="lg:flex-1">
-            <motion.h2 :variants="item" class="text-2xl md:text-3xl font-bold">{{ title }}</motion.h2>
+            <motion.h2 :variants="item" class="text-2xl md:text-3xl leading-7 font-bold">{{ title }}</motion.h2>
             <motion.p :variants="item" class="mt-2 lg:mt-1 font-semibold text-base md:text-lg">{{ desc }}</motion.p>
         </div>
 
