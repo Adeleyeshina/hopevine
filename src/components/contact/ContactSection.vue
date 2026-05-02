@@ -9,8 +9,8 @@ import ContactInfo from './ContactInfo.vue';
     <section class="py-7 md:py-10">
         <div class="container mx-auto px-5 md:px-7 2xl:px-18">
             <div class="flex flex-col md:flex-row items-start gap-y-3 md:gap-5">
-                <ContactForm class="flex-1/2 order-2 md:order-1 w-full"/>
-                <ContactInfo class="flex-1/2 md:order-2 w-full"/>
+                <ContactForm class="flex-1 md:flex-1/2 order-2 md:order-1 w-full"/>
+                <ContactInfo class="flex-1 md:flex-1/2 md:order-2 w-full"/>
             </div>
         </div>
     </section>
