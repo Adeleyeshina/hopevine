@@ -43,7 +43,7 @@ const handleContactForm = () => {
             </div>
             <div class="flex flex-col">
                 <label for="name" class="mb-1.5 ml-1  text-base">Phone/ WhatsApp number</label>
-                <input required type="text" placeholder="e.g. 0802 0000 000" v-model="contactForm.phone"
+                <input required type="tel" pattern="[0-9]{11}" placeholder="e.g. 0802 0000 000" v-model="contactForm.phone"
                     class="border-0 outline-0 ring-2 ring-gray-200/80 py-2 px-5 focus:ring-primary rounded-md">
             </div>
             <div class="flex flex-col">

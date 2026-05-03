@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fortawesome/vue-fontawesome": "^3.2.0",
     "@inotom/vue-rating-star": "^2.0.0",
     "@lucide/vue": "^1.8.0",
