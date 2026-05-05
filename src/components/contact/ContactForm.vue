@@ -1,19 +1,30 @@
 <script setup lang="ts">
 import { computed, reactive, ref } from 'vue';
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
+import emailjs from "@emailjs/browser"
 
-
-const contactForm = reactive({
+const initialState = {
     name: '',
     phone: '',
     event: '',
     date: '',
     info: '',
-})
+}
+
+const contactForm = reactive({ ...initialState })
 const other = ref('')
+const loading = ref(false)
+
+const serviceId = import.meta.env.VITE_SERVICE_ID
+const templateId = import.meta.env.VITE_TEMPLATE_ID
+const publicKey = import.meta.env.VITE_PUBLIC_KEY
+
 const today = computed(() => {
     const d = new Date()
     return d.toISOString().split('T')[0] // format: YYYY-MM-DD
 })
+
 const openDatePicker = (e: Event) => {
     const input = e.target as HTMLInputElement
     if (input.showPicker) {
@@ -21,14 +32,36 @@ const openDatePicker = (e: Event) => {
     }
 
 }
+const resetForm = () => {
+    Object.assign(contactForm, initialState)
+    other.value = ''
+}
 
-const handleContactForm = () => {
-    if (contactForm.event === "other") {
-        alert(JSON.stringify(({ ...contactForm, event: other.value })))
-    } else {
-        alert(JSON.stringify(contactForm))
+const sendMessage = async (data: any) => {
+    loading.value = true
+    try {
+        await emailjs.send(serviceId, templateId, data, publicKey)
+        toast.success("Message sent!")
+        resetForm()
+    } catch (error) {
+        loading.value = false
+        toast.error(error instanceof Error ? error.message : 'An error occured')
+        console.log(error)
+    } finally {
+        loading.value= false
     }
 }
+
+const handleContactForm = () => {
+    let payload;
+    if (contactForm.event === "other") {
+        payload = { ...contactForm, event: other.value }
+    } else {
+       payload = {...contactForm}
+    }
+    sendMessage(payload)
+}
+
 </script>
 
 
@@ -43,7 +76,7 @@ const handleContactForm = () => {
             </div>
             <div class="flex flex-col">
                 <label for="name" class="mb-1.5 ml-1  text-base">Phone/ WhatsApp number</label>
-                <input required type="tel" pattern="[0-9]{11}" placeholder="e.g. 0802 0000 000" v-model="contactForm.phone"
+                <input required type="tel" placeholder="e.g. 0802 0000 000" v-model="contactForm.phone"
                     class="border-0 outline-0 ring-2 ring-gray-200/80 py-2 px-5 focus:ring-primary rounded-md">
             </div>
             <div class="flex flex-col">
@@ -75,9 +108,8 @@ const handleContactForm = () => {
                     cols="30" rows="3" placeholder="Describe your vision, guest count, location"></textarea>
             </div>
 
-            <button type="submit"
-                class="bg-deep-blue text-white w-full py-2 pb-2.5 rounded-md text-base lg:text-lg font-semibold cursor-pointer hover:bg-primary transition-colors duration-300">Send
-                message
+            <button type="submit" :disabled="loading"
+                class="bg-deep-blue disabled:opacity-50 disabled:cursor-not-allowed  text-white w-full py-2 pb-2.5 rounded-md text-base lg:text-lg font-semibold disabled:cursor-disabled cursor-pointer hover:bg-primary transition-colors duration-300"> {{ loading ? 'Sending message...'  : 'Send message'}}
             </button>
         </form>
     </aside>
